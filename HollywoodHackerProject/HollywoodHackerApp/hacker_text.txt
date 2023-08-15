@@ -1,0 +1,66 @@
+Commencing Hack...
+12312.123.123.124.16574.34437.84.346.56547457.346
+345.3.7.35323532.23523.523.432432.235.23634.7458.96.213.214437.
+2342.523.5437.68.58.34643.659.65632.4326459.
+Bypassing firewall...
+
+while(leftPointer <= rightPointer){
+    mid = (leftPointer + rightPointer) / 2;
+    if(nums[mid] == target){
+        return mid;
+    }
+    if(nums[mid] < target){
+        leftPointer = mid + 1;
+    }
+    else{
+        rightPointer = mid - 1;
+    }
+}
+return -1;
+
+Bypassing Firewall...
+7932843.43634.745.82.52.524737547.4636436486524.3254236.
+2425.346574.343.
+3454353.34543.22.2365.24532.4.325.325.32.524.645.8.462435.32526437458745.753435.
+Authorized...
+
+for(int i = 0; i < nums.Length; i++){
+    if(nums[i] == target){
+        return i;
+    }
+}
+Impressing bystanders...
+2432.2352.4132468.23432
+31678.1232.679
+1678.2342.769
+Encryption bypassed...
+
+if(head == null || head.next == null){
+    return head;
+}
+
+ListNode rest = ReverseList(head.next);
+head.next.next = head;
+head.next = null;
+return rest;
+
+Launching cybernuke...
+142.198.144.115
+198.126.160.110
+219.149.72.171
+Frying system...
+
+Commiting crime...
+234324.32643.23423.5.
+232.432.5324.32.4
+2342.758
+Deleting homework...
+
+Doing tomfoolery...
+110.125.23.38
+232.231.52.10
+27.251.239.150
+236.227.254.59
+106.205.110.201
+241.28.122.208
+Stealing crypto...
