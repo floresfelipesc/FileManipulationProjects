@@ -1,0 +1,48 @@
+﻿
+INPUT: string OUTPUT: a new subdirectory with filtered images
+
+1. Given a user defined directory, display each image files in directory (including subdirectories)
+sequentially. 
+
+*1a. Prompt user for directory UI 
+*1b. Verify directory. BL
+*1c. Get all files in directory and subdirectories. BL 
+*1d. Filter out file extensions who don't indicate image file extensions BL
+
+*2. Create deletion subdirectory under user defined directory. BL
+
+*3. Prompt the user to keep or delete the current image displayed. UI
+
+* TODO : 4. Display the image UI
+NOTE: ALL WHILE KEEPING THE ORIGINAL DIMENSIONS INTACT
+*Display an image at a specified default resolution 
+
+*Resize image ased off of the biggest dimension of the image
+
+* Center image automatically within main form
+
+*Create ui element to recieve the directory to pull images from
+
+*create buttons to keep or delete current image
+
+*Keep button functionality
+*Toss Button Functionality
+
+*UI Polish
+*return to main page with insert directory when finished along with alterting that the current directory 
+is finished
+
+
+*5. If keep then nothing, if delete then 
+move the image into the deletion subdirectory. BL
+
+
+
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+
