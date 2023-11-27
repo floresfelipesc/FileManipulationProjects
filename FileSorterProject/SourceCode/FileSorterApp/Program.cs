@@ -15,6 +15,7 @@
  * 
  */
 string? folderPath = "";
+string? rawInput = " ";
 List<string> filePaths = new List<string>();
 //file extension and subfolder path
 Dictionary<string, string> existingFileExtensions = new Dictionary<string, string>();
@@ -28,8 +29,29 @@ while (Directory.Exists(folderPath) == false)
     folderPath = Console.ReadLine();
 }
 
+//TO DO: Input for 
+Console.WriteLine("\nWould you like to include all subdirectories within the directory provided? (Y/N)");
+rawInput = Console.ReadLine();
+if(rawInput != null) rawInput = rawInput.ToUpper();
+while (rawInput == null || rawInput.Equals("Y") == false && rawInput.Equals("N") == false )
+{
+    Console.WriteLine("Invalid input");
+    Console.WriteLine("Would you like to include all subdirectories within the directory provided? (Y/N)");
+    rawInput = Console.ReadLine();
+    if (rawInput != null) rawInput = rawInput.ToUpper();
+}
+
+if (rawInput.Equals("Y"))
+{
+    filePaths = Directory.GetFiles(folderPath, ".", SearchOption.AllDirectories).ToList();
+    
+}
+else
+{
+    filePaths = Directory.GetFiles(folderPath).ToList();
+}
 //get each distinct type of file and create cooresponding subfolder paths
-filePaths = Directory.GetFiles(folderPath).ToList();
+
 Console.Write("\nFiles Detected: 0");
 for (int i = 0; i < filePaths.Count; i++)
 {
@@ -52,7 +74,7 @@ foreach (KeyValuePair<string, string> entry in existingFileExtensions)
     }
 }
 
-Console.Write("\nFiles Moved: 0");
+Console.Write("\nFiles Processed: 0");
 //move all files into their respective subfolder 
 for (int i = 0; i < filePaths.Count; i++) 
 {
@@ -65,7 +87,7 @@ for (int i = 0; i < filePaths.Count; i++)
         Directory.Move(filePaths[i], destinationPath);
     }
     //show live progress of files 
-    UpdateLiveProgress("Files Moved: ", i+1);
+    UpdateLiveProgress("Files Processed: ", i+1);
 }
 
 Console.WriteLine("\n\nOperation complete!");
