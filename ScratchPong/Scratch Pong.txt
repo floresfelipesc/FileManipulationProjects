@@ -4,103 +4,38 @@ the walls of the screen back towards the single player. Each contact with the pl
 Between each increment of the score, the balls gets faster.
 When the player misses the ball, the game ends and you can restart to play again.
 The game keeps track of your current high score and displays it on screen.
+
+HAS:
+Paddle (Player)
+Ball
+Walls
+Main Menu Screen
+Restart menu screen
+Score
+
 ----------------------------------------------------------------------------------------------------------------
 
 
 WHATS:
 
-What is pong?
+--What is pong? 
 Pong is a classic game where it is the virtual version of tennis. It involves a single ball that collides
 and bounces off the walls of the window, and off of the 2 paddles who are 
 controlled by our players. The paddles can only move up or down.
 
-What is a single player version of pong?
+--What is a single player version of pong? 
 It is a spin on the original Pong. There will be only 1 paddle controller by our single player. Our paddle
 will be located gatekeeping the left wall. The ball will collide and bounce off of the other 3 walls
 and our paddle. 
 
-What is the ball?
-We define the ball a square that bounces around the stage. 
-The ball has 4 walls making up the square
 
-What is the paddle?
-The paddle is a thin rectangle that the player can control it's movement to move it in 2 directions 
-up or down while staying within the range of the screen.
-The paddle will be guarding the left wall of the screen.
-
-What does the ball bouncing off of the walls and paddle mean?
-Bouncing off of the walls and paddle mean that the ball will reverse and preserve one of it's movement
-vectors. When the ball collides with a vertical wall, y is preserved and x is reverse in sign. When the
-ball collides with a horizontal wall, x is preserved and y is reversed in sign.
-
-What does the ball colliding with the walls and paddle mean?
-Remember that the ball has 4 walls.
-When the the right wall of the ball's x coordinate is >= to the right wall of the screen that it touches, 
-then there is a collision.
-When the the left wall of the ball's x coordinate is <= to the paddle that it touches, 
-then there is a collision.
-When the the top wall of the ball's y coordinate is >= to the top wall of the screen that it touches, 
-then there is a collision.
-When the the bottom wall of the ball's y coordinate is <= to the bottom wall of the screen that it touches, 
-then there is a collision.
-
-What is contact with the player?
-It means that when the ball comes in contact with the player.
-
-What does it mean that the ball gets faster?
-This means that whatever movement vector the ball currently has, raise those the numbers in whatever
-increment you see fit.
-
-What does it mean when the player misses the ball?
-It means that when the player fails to make contact with the ball, therefore the ball's left wall goes completely
-past the paddle and into the screen's left wall. (Left wall's x is < the screen's left wall x )
-
-What does it mean when the game ends?
-It means that the ball is no longer on screen, then the player can no longer move and a restart
-button appears on screen, allow the player to play again once it's clicked. 
-
-What does it mean that the game keeps track of your highest score?
+--What does it mean that the game keeps track of your highest score?
 It means that whatever score you end the game with is compared to the past high score and updated
 accordingly.
+ 
+-----------------------------------------------------------------------------------------------------------------
 
 
-APPROACH:
-  GAME LOGIC:
-    PADDLE: Has 4 walls in the arrangement in a rectangle. Responds to player input
-    of copying the y position of the user's mouse.
-    The paddle will be guarding the left wall of the screen.
-
-    BALL: Has 4 walls in the arrangement in a square. 
-
-    Moves around the screen bouncing around the walls.
-    When the ball collides with a vertical wall, y is preserved and x is reverse in sign. When the
-    ball collides with a horizontal wall, x is preserved and y is reversed in sign.
-
-    Detects collision with it's own walls versus the walls the screen and paddle.
-    When the the right wall of the ball's x coordinate is >= to the right wall of the screen that it touches, 
-    then there is a collision.
-    When the the left wall of the ball's x coordinate is <= to the paddle that it touches, 
-    then there is a collision.
-    When the the top wall of the ball's y coordinate is >= to the top wall of the screen that it touches, 
-    then there is a collision.
-    When the the bottom wall of the ball's y coordinate is <= to the bottom wall of the screen that it touches, 
-    then there is a collision.
-    When the ball's left wall goes completely
-    past the paddle and into the screen's left wall. (Left wall's x is < the screen's left wall x) then the game ends.
-
-    CURRENT SCORE: When the ball touches the paddle, increment the score by one.
-    HIGH SCORE: When the score is updated, compare with the current highest score. Update the highest score 
-    with the greatest number between the current score and the highest score.
-    
-    
-
-  UI:
-     START BUTTON: Begins the game
-     CURRENT SCORE: Displays current score
-     HIGH SCORE: Displays high score
-     GAME OVER TEXT: Displays when the game ends.
-
-     RESTART BUTTON:Begins the game over again.
 
 
 

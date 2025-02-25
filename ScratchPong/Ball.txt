@@ -1,0 +1,43 @@
+WHATS:
+
+What is the ball?
+We define the ball a square that bounces around the stage. 
+The ball has 4 walls making up the square
+It gets faster when bouncing off of the paddle
+
+What does the ball bouncing off of the walls and paddle mean?
+Bouncing off of the walls and paddle mean that the ball will reverse and preserve 
+one of it's movement vectors. 
+
+What does it mean that the ball gets faster?
+This means that whatever movement vector the ball currently has, raise those the numbers in whatever
+increment you see fit.
+
+
+
+
+HOWS:
+How will the ball move?
+Using movement vectors, we will draw the ball to the screen in different positions
+rapidly to give the illusion of movement. For
+a full range of movement, the ball will have 4 major movement vectors corresponding to 
+it's full range of motion. (+,+) (-,-) (+,-) (-,+) 
+
+How will the ball start it's movement?
+It will start in the same initial position each time, and be "served".
+The ball will always start in the middle in the 
+righthand part of the screen. When the game starts, the ball will start to move in a random direction 
+towards the paddle. This will be a range of 45 degrees. The ball will never be served at a 0 degree angle
+
+How we reverse the ball's movement vectors?
+When the ball collides with a vertical wall, y is preserved and x is reverse in sign. When the
+ball collides with a horizontal wall, x is preserved and y is reversed in sign.
+
+
+How will the ball increase it's speed when colliding with the paddle?
+The ball will have a speed multiplier to it's own movement that we will modify to make it go faster
+each time
+
+
+How will collision be detected? 
+That is up to another object

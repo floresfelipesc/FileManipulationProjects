@@ -1,0 +1,16 @@
+WHATS:
+What is the main menu screen?
+The main menu screen simply displays a button that allows you to begin the game
+
+What does beginning the game mean?
+It means the main game screen is displayed and overried the main menu screen, then the ball
+is served and control is given to the player.
+
+HOWS:
+How will we display the button?
+We draw the position of the button itself to the screen and await for the user to click on the button.
+
+How will the game begin?
+When we receive the message that the start button has been pressed, we transition to the main
+game screen.
+

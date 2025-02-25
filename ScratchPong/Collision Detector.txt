@@ -1,0 +1,39 @@
+WHATS:
+What is the Collision Detector?
+This keeps track of all other objects within the game world position.
+It detects when and who collides with any other object, and send a message to the 
+cooresponding objects so that they may intiate they're cooresponding behavior upon
+collision
+
+HOWS:
+
+How will we detect collisions?
+We keep track of the position of all objects and continously check their positions to see when they overlap
+
+How will we detect that the ball collide with the walls?
+Remember that the ball has 4 walls.
+When the the right wall of the ball's x coordinate is >= to the right wall of the screen that it touches, 
+then there is a collision.
+When the the top wall of the ball's y coordinate is >= to the top wall of the screen that it touches, 
+then there is a collision.
+When the the bottom wall of the ball's y coordinate is <= to the bottom wall of the screen that it touches, 
+then there is a collision.
+Then we send a message to the ball of the details of the collision
+
+How will we detect that the ball collides with the paddle?
+When the the left wall of the ball's x coordinate is <= to the paddle that it touches, 
+then there is a collision.
+Then we send a message to the ball of the details of the collision and a message to the
+score.
+
+How will we detect that the ball has gone past the paddle?
+The ball's left wall goes completely
+past the paddle and into the screen's left wall. (Left wall's x is < the screen's left wall x )
+Then we send a message to the Restart menu
+
+How will we detect the mouse hovering over menu options?
+We keep track of the position of the mouse and see if it overlaps the area of the menu options.
+Upon a click and colliding, we send a message to the menu option.
+
+
+

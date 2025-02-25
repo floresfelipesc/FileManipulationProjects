@@ -1,0 +1,17 @@
+WHATS:
+What is the paddle?
+The paddle is a thin rectangle that the player can control it's movement to move it in 2 directions 
+up or down while staying within the range of the screen.
+The paddle will be guarding the left wall of the screen.
+The ball will bounce off the paddle
+
+HOWS:
+How will the paddle be placed on screen?
+It will start in the middle of the left wall of the screen
+
+How will the paddle move up and down?
+Following the player's mouse y position. The paddle's y position will
+be updated to copy the player's mouse y position.
+
+How will the paddle detect collision?
+In another object
