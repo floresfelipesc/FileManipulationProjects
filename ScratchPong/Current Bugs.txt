@@ -1,0 +1,3 @@
+When the Ball bounces off of the paddle, it increases in speed but then slows down after colliding with a wall
+
+When the ball gets too fast, it can phase through the walls of the game as it stands.
