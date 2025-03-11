@@ -6,12 +6,13 @@ The paddle will be guarding the left wall of the screen.
 The ball will bounce off the paddle
 
 HOWS:
-How will the paddle be placed on screen?
+--How will the paddle be placed on screen?
 It will start in the middle of the left wall of the screen
 
-How will the paddle move up and down?
-Following the player's mouse y position. The paddle's y position will
-be updated to copy the player's mouse y position.
+--How will the paddle move up and down?
+Following the player's mouse y position only up to a defined limit depending on the screen. 
+
+
 
 How will the paddle detect collision?
 In another object

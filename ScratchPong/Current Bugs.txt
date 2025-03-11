@@ -1,3 +1,12 @@
-When the Ball bounces off of the paddle, it increases in speed but then slows down after colliding with a wall
+--When the Ball bounces off of the paddle, it increases in speed but then slows down after colliding with a wall
+Fixed
+--When the ball gets too fast, it can phase through the walls of the game as it stands.
+Not possible to fix unless I have control over the order in which things run in, which
+is not possible in Scratch. Unfortunate.
 
-When the ball gets too fast, it can phase through the walls of the game as it stands.
+I would need to calculate where the ball would move before actually moving it. 
+If the ball's future move would go past the collision, then we treat it as if it is
+colliding.
+Then upon colliding we adjust the movement values.
+
+Put all of this as a part of collision detection and run collision first before running movement.

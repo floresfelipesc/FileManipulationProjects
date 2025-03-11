@@ -6,10 +6,10 @@ has bounced off the paddle and the highest score they have gotten so far.
 . Then it displays that number in the UI to the player.
 
 HOWS:
-How will we keep track of the player's current number of times that the ball has bounced off the
+--How will we keep track of the player's current number of times that the ball has bounced off the
 paddle?
 The collider detector will send a message to us, then we increment the number
 
-How will we keep track of the player's highest score so far?
+--How will we keep track of the player's highest score so far?
 whatever score you end the game with is compared to the past high score and updated
 accordingly.It is then displayed.

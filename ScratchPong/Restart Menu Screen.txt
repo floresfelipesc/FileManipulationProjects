@@ -3,11 +3,14 @@ What is the restart menu screen?
 It is the screen that gets displayed and overides the main gameplay screen. It presents
 the option to restart the game and your latest high score.
 
+--How will we display the screen?
+When the ball hits the left wall, the game is over then all the elements of the screen get
+displayed
 
-How will we keep track of the player's highest score so far?
+--How will we keep track of the player's highest score so far?
 Whatever score you end the game with is compared to the past high score and updated
 accordingly.It is then displayed.
 
-How do we restart the game? We reset the positions of the paddle and ball, plus reset the
+--How do we restart the game? We reset the positions of the paddle and ball, plus reset the
 current score to 0, then we have the game begin once again.
 

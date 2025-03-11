@@ -35,7 +35,7 @@ The ball's left wall goes completely
 past the paddle and into the screen's left wall. (Left wall's x is < the screen's left wall x )
 Then we send a message to the Restart menu
 
-How will we detect the mouse hovering over menu options?
+--How will we detect the mouse hovering over menu options?
 We keep track of the position of the mouse and see if it overlaps the area of the menu options.
 Upon a click and colliding, we send a message to the menu option.
 
