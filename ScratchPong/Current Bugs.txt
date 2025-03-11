@@ -1,6 +1,48 @@
 --When the Ball bounces off of the paddle, it increases in speed but then slows down after colliding with a wall
 Fixed
 --When the ball gets too fast, it can phase through the walls of the game as it stands.
+Then the ball's collision gets triggered rapidly, making it jitter and swap directions
+across the screen at seemingly random.
+
+
+What does it mean when the ball get's too fast?
+The ball's movement is updated across the screen by updating it's position 
+every frame by adding values to it's current position. Redrawing the ball's
+position in according the movement vectors added at a rapid pace creates
+the illusion of movement.
+Complications tend to happen when the movement vectors increase to an
+unspecified amount.
+
+What does it mean when the ball phases through the walls of the game?
+It means that the position of the ball is updated so that in the first
+frame, the ball is behind the wall, and then the next frame the ball is behind the wall
+
+What does it mean that the ball's collision gets triggered rapidly?
+It means that the ball's collision box does not stop making contact with the walls,
+causing it to reverse it's movement over and over again.
+
+Possible Solution:
+Maybe make it so that the collision whenever making contact only triggers the
+collision once upon initial collision calculation?
+This doesn't work because the root cause is the position still being within bounds
+to call it a collision, never escaping collision range.
+
+Perhaps upon collision, I can correct the position of the cube to be on the point
+of contact, that way upon the next frame, the reverse movement will for sure move it
+out of range of collision.
+
+
+
+
+
+
+
+
+
+
+
+
+
 Not possible to fix unless I have control over the order in which things run in, which
 is not possible in Scratch. Unfortunate.
 
@@ -10,3 +52,4 @@ colliding.
 Then upon colliding we adjust the movement values.
 
 Put all of this as a part of collision detection and run collision first before running movement.
+
