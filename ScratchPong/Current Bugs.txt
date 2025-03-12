@@ -20,7 +20,7 @@ frame, the ball is behind the wall, and then the next frame the ball is behind t
 What does it mean that the ball's collision gets triggered rapidly?
 It means that the ball's collision box does not stop making contact with the walls,
 causing it to reverse it's movement over and over again.
-
+---------------------------------------------------------------------------------------
 Possible Solution:
 Maybe make it so that the collision whenever making contact only triggers the
 collision once upon initial collision calculation?
@@ -46,12 +46,17 @@ Then we change to the regular movement vector that the ball was using before.
 
 --------------------------------------------------------------------------------------
 How detect a future collision?
-We take the position of the ball before moving and it's offsets, it's 
+--We take the position of the ball before moving and it's offsets, it's 
 current movement vector, and the position of the thing it is going to 
-collide with. If the future position of the ball goes past the thing it
+collide with.
+We add the current position of the ball plus the movement vectors to find it's
+future position.
+If the future position of the ball goes past the thing it
 is going to collide with, then a future collision is detected.
+**assuming that the movement vector and position when added no matter
+the signs will give the final position
 
-How do we calculate the movement vector to use upon the next tick 
+--How do we calculate the movement vector to use upon the next tick 
 so that they border each other?
 We subtract the future position by the position of the colliding entity.
 This is the distance of the future collision position and the
@@ -59,6 +64,8 @@ colliding entity.
 Then we subtract the current movement vector from the distance of the 
 future collision calculated. That is our new movement vector for the next tick.
 
+--------------------------------------------------------------------------------------
+NOT NEEDED
 How do we update the movement vector with our new tick?
 We broadcast a message to update the movement vector with our new values for the 
 next tick.
