@@ -27,9 +27,46 @@ collision once upon initial collision calculation?
 This doesn't work because the root cause is the position still being within bounds
 to call it a collision, never escaping collision range.
 
-Perhaps upon collision, I can correct the position of the cube to be on the point
-of contact, that way upon the next frame, the reverse movement will for sure move it
-out of range of collision.
+??Perhaps before every movement tick a future collision is detected,
+ I can correct the position of the cube to be hugging in whatever it is in contact
+with, that way upon the next frame, the reverse movement will for 
+sure move it out of range of collision.
+
+What does it mean before every movement tick a future collision is detected?
+We have a condition where as long as a future collision isn't detected, then 
+we execute the movement tick with the normal movement vectors as normal.
+
+What does it mean to correct the position of the cube to be hugging in whatever
+it is projected to make contact with?
+It means that we have to calculate which movement vector to use that upon the next tick,
+the border of the colliding wall should be touching the wall pixel perfectly.
+
+What does it mean to execute the movement tick with normal movement vectors as normal?
+Then we change to the regular movement vector that the ball was using before.
+
+--------------------------------------------------------------------------------------
+How detect a future collision?
+We take the position of the ball before moving and it's offsets, it's 
+current movement vector, and the position of the thing it is going to 
+collide with. If the future position of the ball goes past the thing it
+is going to collide with, then a future collision is detected.
+
+How do we calculate the movement vector to use upon the next tick 
+so that they border each other?
+We subtract the future position by the position of the colliding entity.
+This is the distance of the future collision position and the
+colliding entity.
+Then we subtract the current movement vector from the distance of the 
+future collision calculated. That is our new movement vector for the next tick.
+
+How do we update the movement vector with our new tick?
+We broadcast a message to update the movement vector with our new values for the 
+next tick.
+
+How do we change the movement vector to the movement vector is should
+continue in? Continue the new reversed movement vector as normal immediately
+overriding the movement vector we calculated on the next tick.
+
 
 
 
